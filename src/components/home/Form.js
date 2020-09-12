@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useRef } from 'react';
 
 import { connect } from 'react-redux';
 
@@ -10,24 +10,29 @@ import {
 } from '../../actions/Actions';
 
 const SearchForm = (props) => {
+  const textRef = useRef()
+  const yearRef = useRef()
 
   useEffect(()=>{
     props.fetchMovies();
   },[])
 
   const onChange = e => {
-    props.searchMovie(e.target.value);
+    props.searchMovie(textRef.current.value);
   };
 
   const onChange2 = e => {
-    props.searchYear(e.target.value);
+    props.searchYear(yearRef.current.value);
   };
 
   const onSubmit = e => {
-    e.preventDefault();
-    props.fetchMovies(props.text,props.year);
-    props.setLoading();
-
+    if(yearRef.current.value !== null && textRef.current.value !== null){
+      e.preventDefault();
+      props.fetchMovies(textRef.current.value,yearRef.current.value);
+      props.setLoading();
+    }
+    textRef.current.value = null
+    yearRef.current.value = null
   };
 
 
@@ -46,6 +51,7 @@ const SearchForm = (props) => {
               name="searchText"
               placeholder="Search for Movies"
               onChange={onChange}
+              ref={textRef}
             />
             <input
             style={{borderBottomLeftRadius:200}}
@@ -55,6 +61,7 @@ const SearchForm = (props) => {
               name="year"
               placeholder="Year"
               onChange={onChange2}
+              ref ={yearRef}
             />
 
             
