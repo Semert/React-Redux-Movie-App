@@ -1,0 +1,8 @@
+.status{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.status>select{
+    width: 200px;
+}
