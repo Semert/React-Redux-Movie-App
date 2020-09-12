@@ -38,7 +38,13 @@ const MoviesContainer = ({movies}) => {
         ? (
             <MovieSection  filteredMovies={filteredMovies} />
           )
-        : null;
+        : (
+          <>
+                      <MovieSection  filteredMovies={filteredMovies} />
+                      <h2 style={{margin:"auto"}}> Please search with valid "name" OR valid "year". Example : [Batman, 1997]</h2>
+          
+          </>
+        )
 
     return <> 
             <div className="status selectpicker">
@@ -49,9 +55,8 @@ const MoviesContainer = ({movies}) => {
               </select>
             </div>   
     <div className="row">
-
       {content}
-      </div>;
+      </div>
       </>
 }
 

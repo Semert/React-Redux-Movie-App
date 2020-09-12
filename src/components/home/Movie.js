@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -6,15 +6,13 @@ import { fetchMovie, setLoading } from '../../actions/Actions';
 
 import Spinner from '../layout/Spinner';
 
-export class Movie extends Component {
-  componentDidMount() {
-    this.props.fetchMovie(this.props.match.params.id);
-    this.props.setLoading();
-
-  }
-  
-  render() {
-    const { loading, movie } = this.props;
+const Movie = (props) => {
+  useEffect(() => {
+    props.fetchMovie(props.match.params.id);
+    props.setLoading();
+  },[]) 
+   
+    const { loading, movie } = props;
     {console.log(movie)}
     let movieInfo = (
       <div className="container">
@@ -57,9 +55,6 @@ export class Movie extends Component {
             <div className="col-md-12">
               <h3>About </h3>
               {movie.Plot}
-
-
-
               <hr />
               <a
                 href={'https://www.imdb.com/title/' + movie.imdbID}
@@ -69,10 +64,6 @@ export class Movie extends Component {
               >
                 View on IMDB
               </a>
-
-
-
-
               <Link to="/" className="btn btn-outline-danger text-light ml-3">
                 Go Back To Search
               </Link>
@@ -83,9 +74,8 @@ export class Movie extends Component {
     );
 
     let content = loading ? <Spinner /> : movieInfo;
-    return <div>{content}</div>;
+    return (<div>{content}</div>)
   }
-}
 
 const mapStateToProps = state => ({
   loading: state.movies.loading,
