@@ -19,7 +19,9 @@ const MoviesContainer = ({movies}) => {
     switch(status)
     {
       case 'series':
-        setFilteredMovies(movies.Search.filter(movie => movie.Type === "series")) 
+        if(filteredMovies){
+          setFilteredMovies(movies.Search.filter(movie => movie.Type === "series")) 
+        }
         break; 
       default:
         setFilteredMovies(movies.Search)

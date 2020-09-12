@@ -27,6 +27,7 @@ const SearchForm = (props) => {
     e.preventDefault();
     props.fetchMovies(props.text,props.year);
     props.setLoading();
+
   };
 
 
