@@ -12,7 +12,7 @@
 ![Adsız7](https://user-images.githubusercontent.com/44974863/93000773-2d473500-f533-11ea-8222-27ccd80a9eb8.png)
 
 
-## Start!
+# Let's begin!
 
 ### `npm install`
 
