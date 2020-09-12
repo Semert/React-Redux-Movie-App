@@ -5,10 +5,11 @@
 ### actors, IMDb score etc.) are directed to another page where they can be viewed!
 ### Also, if the user wants, they can see the movie they want on the imdb site!
 
+## Search for a movie
 ![Adsız5](https://user-images.githubusercontent.com/44974863/93000768-2b7d7180-f533-11ea-8f53-f8ff1444f351.png)
-
+## Filter for series
 ![Adsız6](https://user-images.githubusercontent.com/44974863/93000772-2cae9e80-f533-11ea-8286-810da8d523a2.png)
-
+## Learn the details about the movie you want
 ![Adsız7](https://user-images.githubusercontent.com/44974863/93000773-2d473500-f533-11ea-8222-27ccd80a9eb8.png)
 
 
