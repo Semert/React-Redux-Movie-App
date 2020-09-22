@@ -1,4 +1,6 @@
 ## This project includes React Hooks, React Router Dom, Redux, ES6+, Boostrap and even more!
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/44974863/93855510-49c83780-fcc0-11ea-9e1d-5feec71a833d.gif)
+
 ### The user can search only movies and TV series!
 ### The user can only list the movies that have been released in the year they want!
 ### When the movie name is clicked, the user can view the poster and other details of the movie (title, duration, genre, director, actors, IMDb score etc.) are directed to another page where they can be viewed!
