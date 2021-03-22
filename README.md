@@ -30,7 +30,6 @@ Runs the app
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
 So only you need to do is download the project then open terminal and type : "npm install"
 After the installation, type : "npm start"
 Have Fun :)
